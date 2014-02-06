@@ -10,6 +10,9 @@ Quick reference for R commands useful for lab assignments in EVE 101.
 | plot `y1` vs `x` | `plot(x, y1)` | `type="l"` for line, `lty` for linetype, `col` for color, see `?plot` and `?par` for details |
 | plot two columns from a data frame `d` | `plot(d$col1, d$col2)` or `plot(col2 ~ col1, data=d)` | data.frame is what is created by `read.csv`|
 | add `y2` vs `x` to already-created plot      | `points(x, y1)`     |   same options as `plot` |
+| store linear regression of column `y` on `x` from data `d` in `my.lm`      | `my.lm <- lm(y ~ x, d)`     |   ... |
+| summarize `my.lm` including coefficients, standard errors, `R^2`      | `summary(my.lm)`     |  see function `coef` to extract just the coefficients |
+| add line of best fit from  `my.lm` to existing graph      | `abline(my.lm)`     |  ... |
 
 
 
@@ -21,7 +24,13 @@ Tips:
 * to add more data, use `points` and the `type="l"` argument but be sure to use an argument for linetype `lty` or color `col` to differentiate the lines
 * using `lines` instead of `points` will save you having to write the type argument out
 
-### Learning more about plots: 
+### Using `lm` and `summary` (lab 4)
 
-* to understand the basics of plot, including options for the `type` argument, type `?plot` at `R` prompt
-* for more information on linetypes and colors, type `?par` at the `R` prompt (there is lots of other information in this help file too)
+* fit a model with `lm` and store it in a variable, say `my.lm`
+* use `summary(my.lm` to view coefficients and statistics
+
+
+### Learning more about commands: 
+
+* *plot*: to understand the basics of plot, including options for the `type` argument, type `?plot` at `R` prompt
+* *plot* *lines* and *points*: for more information on linetypes and colors, type `?par` at the `R` prompt (there is lots of other information in this help file too)
