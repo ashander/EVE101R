@@ -27,7 +27,7 @@ Tips:
 ### Using `lm` and `summary` (lab 4)
 
 * fit a model with `lm` and store it in a variable, say `my.lm`
-* use `summary(my.lm` to view coefficients and statistics
+* use `summary(my.lm)` to view coefficients and statistics
 
 
 ### Learning more about commands: 
